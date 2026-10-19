@@ -5063,7 +5063,7 @@ pymol::Result<> ExecutiveRampNew(PyMOLGlobals* G, const char* name,
           rampType = cRampMol;
           break;
         default:
-          pymol::make_error(src_name, " is not a map or molecule.");
+          return pymol::make_error(src_name, " is not a map or molecule.");
         }
       } else {
         return pymol::make_error(src_name, " not found.");
